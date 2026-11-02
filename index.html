@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca Virtual</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#inicio">Biblioteca Virtual</a>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#sugestoes">Sugestões</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="abertura">
+      <h1>Todo o acervo, a uma busca de distância.</h1>
+      <p>Procure pelo título, escolha sua próxima leitura e sugira os livros que faltam na estante.</p>
+    </section>
+
+    <section id="catalogo" class="secao" aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Catálogo</h2>
+      <label class="rotulo-busca" for="busca">Buscar por título</label>
+      <input type="search" id="busca" name="busca" placeholder="Ex.: Dom Casmurro" autocomplete="off">
+      <p id="status-busca" class="vazio" hidden>Nenhum livro encontrado para essa busca.</p>
+
+      <ul class="grade" id="lista-livros">
+        <li><article class="livro" style="--capa:#2f5d62">
+          <div class="capa" aria-hidden="true"></div>
+          <h3>Dom Casmurro</h3><p class="autor">Machado de Assis</p>
+        </article></li>
+        <li><article class="livro" style="--capa:#8c3b3b">
+          <div class="capa" aria-hidden="true"></div>
+          <h3>Grande Sertão: Veredas</h3><p class="autor">João Guimarães Rosa</p>
+        </article></li>
+        <li><article class="livro" style="--capa:#3d4f7c">
+          <div class="capa" aria-hidden="true"></div>
+          <h3>Vidas Secas</h3><p class="autor">Graciliano Ramos</p>
+        </article></li>
+        <li><article class="livro" style="--capa:#a07a2c">
+          <div class="capa" aria-hidden="true"></div>
+          <h3>A Hora da Estrela</h3><p class="autor">Clarice Lispector</p>
+        </article></li>
+        <li><article class="livro" style="--capa:#4a6b3a">
+          <div class="capa" aria-hidden="true"></div>
+          <h3>Memórias Póstumas de Brás Cubas</h3><p class="autor">Machado de Assis</p>
+        </article></li>
+        <li><article class="livro" style="--capa:#5b3f73">
+          <div class="capa" aria-hidden="true"></div>
+          <h3>O Cortiço</h3><p class="autor">Aluísio Azevedo</p>
+        </article></li>
+        <li><article class="livro" style="--capa:#1f4e6b">
+          <div class="capa" aria-hidden="true"></div>
+          <h3>Capitães da Areia</h3><p class="autor">Jorge Amado</p>
+        </article></li>
+        <li><article class="livro" style="--capa:#7a4a2a">
+          <div class="capa" aria-hidden="true"></div>
+          <h3>Quarto de Despejo</h3><p class="autor">Carolina Maria de Jesus</p>
+        </article></li>
+      </ul>
+    </section>
+
+    <section id="sugestoes" class="secao secao-form" aria-labelledby="titulo-sugestoes">
+      <h2 id="titulo-sugestoes">Sugerir aquisição</h2>
+      <p>Não achou o que procurava? Conte qual livro devemos adicionar.</p>
+      <form id="form-sugestao" action="#" method="post" novalidate>
+        <div class="campo">
+          <label for="nome">Nome do leitor</label>
+          <input type="text" id="nome" name="nome" autocomplete="name">
+        </div>
+        <div class="campo">
+          <label for="titulo-livro">Título do livro</label>
+          <input type="text" id="titulo-livro" name="titulo" aria-describedby="mensagem-form">
+        </div>
+        <button type="submit">Enviar sugestão</button>
+        <p id="mensagem-form" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contato" class="rodape">
+    <p>Biblioteca Virtual &middot; Atendimento: contato@bibliotecavirtual.example</p>
+  </footer>
+</body>
+</html>
